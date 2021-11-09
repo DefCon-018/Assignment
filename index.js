@@ -9,6 +9,10 @@ app.use(cors());
 //db
 const db = require('./config/mongoose');
 
+//route
+app.use('/', require('./routes'));
+
+//start server
 app.listen(8000, (err) => {
   if (err) {
     console.log('error in setting up the server', err);
