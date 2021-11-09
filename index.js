@@ -2,6 +2,13 @@ const express = require('express');
 
 const app = express();
 
+//cors
+const cors = require('cors');
+app.use(cors());
+
+//db
+const db = require('./config/mongoose');
+
 app.listen(8000, (err) => {
   if (err) {
     console.log('error in setting up the server', err);
