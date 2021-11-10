@@ -2,6 +2,12 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.urlencoded());
+
+// passport jwt setup
+const passport = require('passport');
+const JWTStrategy = require('./config/passport-jwt-strategy');
+
 //cors
 const cors = require('cors');
 app.use(cors());
